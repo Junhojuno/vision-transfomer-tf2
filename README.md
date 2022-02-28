@@ -26,4 +26,6 @@ python demo_image.py
 
 
 ## References
-[google-research/vision_transformer](https://github.com/google-research/vision_transformer)
+- [google-research/vision_transformer](https://github.com/google-research/vision_transformer)
+- [pytorch-image-models/vision_transformer](https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py)
+- [justHungryMan/vision-transformer-tf](https://github.com/justHungryMan/vision-transformer-tf?fbclid=IwAR39ViXABLwdKZlaJM0sl4ROypx5ecz4IYSLngabowx8IQ02M3oEVGS4qA0)
