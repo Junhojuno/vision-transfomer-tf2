@@ -1,6 +1,10 @@
-# test
-test*.py
-*test.py
+# not to be pushed
+*test*
+*legacy*
+*.jpg
+*.png
+*backup
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
