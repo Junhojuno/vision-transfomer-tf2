@@ -92,7 +92,7 @@ def multi_head_attention(
     dropout_rate: float,
     name: str
 ) -> tf.Tensor:
-    """This is Multi-Head Attention
+    """Multi-Head Dot-Product Attention
         - 1. 입력 patch embeddings으로부터 (query, key, value) 추출
         - 2. weight matrix 추출(weights = query @ key)
         - 3. weight matrix를 value에 곱하기
@@ -157,7 +157,7 @@ def multi_head_attention(
         name=f'{prefix}/weight/softmax'
     )(
         tf.matmul(Q, K, transpose_b=True,
-                  name=f'{prefix}/weight/matmul') * (n_heads ** 0.5)
+                  name=f'{prefix}/weight/matmul') / (n_heads ** 0.5)
     )  # (B, heads, N+1, N+1)
     W = layers.Dropout(
         dropout_rate,
