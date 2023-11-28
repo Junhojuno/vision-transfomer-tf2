@@ -138,7 +138,7 @@ def multi_head_attention(
         QKV = layers.Reshape(
             [3*n_heads, head_dims, -1],
             name=f'{prefix}/reshape'
-        )(QKV)  # (B, 3*heads, dims, N+1)
+        )(QKV)  # (B, 3*heads, dims, N+1); dims == head_dims
         QKV = tf.transpose(QKV, [0, 1, 3, 2])  # (B, 3*heads, N+1, dims)
 
         return tf.split(
